@@ -8,24 +8,24 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
-let svar = (x)=>x*2.2046;
-let gram = (x)=>x/0.001;
-let unc = (x) =>x*35.274;
+let svar = (x) => x * 2.2046;
+let gram = (x) => x / 0.001;
+let unc = (x) => x * 35.274;
 
-document.querySelector("form").addEventListener("submit", (e)=>{
+document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
     let inpKg = document.getElementById("search").value;
     let ansDiv = document.createElement("div");
     ansDiv.className = "ansDiv";
     let lbRow = document.createElement("h1");
-    lbRow.textContent = inpKg + "kg = "+svar(inpKg)+"lb";
+    lbRow.textContent = inpKg + "kg = " + svar(inpKg) + "lb";
     let gRow = document.createElement("h1");
-    gRow.textContent = inpKg + "kg = "+gram(inpKg)+"g";
+    gRow.textContent = inpKg + "kg = " + gram(inpKg) + "g";
     let ozRow = document.createElement("h1");
-    ozRow.textContent = inpKg + "kg = "+unc(inpKg)+"oz";
-    ansDiv.append(lbRow,gRow,ozRow);
+    ozRow.textContent = inpKg + "kg = " + unc(inpKg) + "oz";
+    ansDiv.append(lbRow, gRow, ozRow);
     document.getElementById("output").append(ansDiv);
-    
-    
+
+
 })
 
