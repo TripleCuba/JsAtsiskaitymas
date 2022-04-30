@@ -12,6 +12,7 @@ let svar = (x) => x * 2.2046;
 let gram = (x) => x / 0.001;
 let unc = (x) => x * 35.274;
 
+
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
     let inpKg = document.getElementById("search").value;
